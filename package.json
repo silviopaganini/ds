@@ -1,7 +1,6 @@
 {
-  "name": "ds",
+  "name": "@silviopaganini/ds-test",
   "version": "0.1.0",
-  "private": true,
   "main": "./lib/main.js",
   "module": "./lib/main.js",
   "types": "./lib/main.d.ts",
