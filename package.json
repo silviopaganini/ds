@@ -1,6 +1,6 @@
 {
   "name": "@silviopaganini/ds-test",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "./lib/main.js",
   "module": "./lib/main.js",
   "types": "./lib/main.d.ts",
@@ -39,6 +39,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "prebuild": "rimraf lib",
+    "cp": "npx crcf",
+    "postcp": "node ./utils/create-index.js",
     "prepublish": "npm run build"
   },
   "eslintConfig": {

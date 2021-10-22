@@ -1,0 +1,12 @@
+[
+  "stories",
+  "typescript",
+  "nocss",
+  "nosemi",
+  "namedexports",
+  "singlequote",
+  "functional",
+  {
+    "output": "src/components"
+  }
+]

@@ -1,0 +1,9 @@
+import { render, screen } from '@testing-library/react';
+import {{#if export~}} { {{ name }} } {{else~}} {{name}} {{~/if}} from './{{name}}'
+
+describe('{{ name }}', () => {
+  test('matches snapshot', () => {
+    const wrapper = render(<{{ name }} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+});
