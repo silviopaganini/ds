@@ -12,12 +12,15 @@ const theme: Theme = {
   },
 };
 
+const internalTheme = theme;
+
 type ThemeProviderProps = PropsWithChildren<{
-  theme: Theme;
+  theme?: Theme;
 }>;
 
-const ThemeProvider = ({ theme, children }: ThemeProviderProps) => (
-  <TP theme={theme}>{children}</TP>
-);
+const ThemeProvider = ({
+  theme = internalTheme,
+  children,
+}: ThemeProviderProps) => <TP theme={theme}>{children}</TP>;
 
 export { theme, ThemeProvider };
