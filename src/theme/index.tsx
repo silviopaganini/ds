@@ -3,7 +3,7 @@ import { Theme, ThemeProvider as TP } from "theme-ui";
 
 const theme: Theme = {
   colors: {
-    primary: "#FF0000",
+    primary: "#00FFFF",
   },
   buttons: {
     primary: {
