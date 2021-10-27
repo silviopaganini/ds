@@ -1,6 +1,6 @@
 {
-  "name": "@silviopaganini/ds-test",
-  "version": "0.1.8",
+  "name": "@platinion/design-system",
+  "version": "0.1.9",
   "main": "./lib/main.js",
   "module": "./lib/main.js",
   "types": "./lib/main.d.ts",
@@ -76,9 +76,11 @@
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
+    "@storybook/addons": "^6.3.12",
     "@storybook/node-logger": "^6.3.12",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.12",
+    "@storybook/theming": "^6.3.12",
     "copyfiles": "^2.4.1",
     "rimraf": "^3.0.2"
   }

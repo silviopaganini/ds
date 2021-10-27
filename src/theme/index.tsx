@@ -24,3 +24,4 @@ const ThemeProvider = ({
 }: ThemeProviderProps) => <TP theme={theme}>{children}</TP>;
 
 export { theme, ThemeProvider };
+export type { Theme };

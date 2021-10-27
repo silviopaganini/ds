@@ -1,0 +1,85 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Getting Started/Developers" />
+
+# Getting Started Guide for Developers
+
+The Platinion Design System contains a collection of React components that can be used to build accessible and performant React applications consistent with Platinion brand guidelines. This getting started guide provides the basic instructions to install the Platinion Design System components as a dependency in your application and begin using those components. The documentation for each individual component provides more detailed information including:
+
+- An overview with contextual usage guidance and best practices
+- Examples of common variations of the component such as sizes and states
+- Guidance for using the components with accessiblity in mind
+- A detailed description of available React props along with an interactive playground environment
+
+<br />
+<br />
+
+## Using this project
+
+Add this library to your project
+
+```
+npm add @platinion/design-system
+```
+
+Or if you're using yarn
+
+```
+yarn add @platinion/design-system
+```
+
+### The ThemeProvider component
+
+To use components from Platinion UI React, you need to wrap your app with a `<ThemeProvider>` component.
+
+```tsx
+import { ThemeProvider } from "@platinion/design-system";
+import React from "react";
+import ReactDOM from "react-dom";
+
+ReactDOM.render(
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>,
+  container
+);
+```
+
+#### Custom Theme for ThemeProvider
+
+We use [Theme-ui](https://theme-ui.com/docs) as the barebone of the library, check the documentation for more information.
+
+The base for a custom theme is as follows:
+
+```tsx
+// src/theme/index.ts
+
+import { theme } from "@platinion/design-system";
+import type { Theme } from "@platinion/design-system";
+
+const customTheme: Theme = {
+  ...theme,
+
+  colors: {
+    primary: "#FF0000",
+  },
+};
+
+export { customTheme };
+```
+
+And apply the theme on `<ThemeProvider>` as follows
+
+```tsx
+import { ThemeProvider } from "@platinion/design-system";
+import React from "react";
+import ReactDOM from "react-dom";
+import { customTheme } from "./theme";
+
+ReactDOM.render(
+  <ThemeProvider theme={customTheme}>
+    <App />
+  </ThemeProvider>,
+  container
+);
+```
