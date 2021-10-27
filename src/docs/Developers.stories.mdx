@@ -16,7 +16,25 @@ The Platinion Design System contains a collection of React components that can b
 
 ## Using this project
 
+The Platinion Design System is typically installed into a project managed by npm or yarn as a JavaScript package from the Platinion GitHub Package Registry.
+
+Add the Platinion scoped package registry to your list of available registries through a .npmrc file located at the root of your project:
+
 Add this library to your project
+
+```npmrc
+always-auth=true
+@audi:registry=https://npm.pkg.github.com
+```
+
+Note: Since the repository is currently private, remember to authenticate for GitHub following this guide. To sign up for an access token, please contact DesignOps and provide the following information:
+
+- Email
+- Name
+- Agency/employer
+- Github username (optional)
+
+Now add this project as a dependency of your project with:
 
 ```
 npm add @platinion/design-system
@@ -55,9 +73,8 @@ The base for a custom theme is as follows:
 // src/theme/index.ts
 
 import { theme } from "@platinion/design-system";
-import type { Theme } from "@platinion/design-system";
 
-const customTheme: Theme = {
+const customTheme = {
   ...theme,
 
   colors: {
