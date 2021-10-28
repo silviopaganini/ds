@@ -21,6 +21,10 @@ export default {
       options: Object.keys(theme.colors || {}),
       control: { type: 'radio' },
     },
+    as: {
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+      control: { type: 'radio' },
+    },
   },
 } as ComponentMeta<typeof Heading>
 
