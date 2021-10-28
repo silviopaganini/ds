@@ -1,5 +1,7 @@
+import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import {{#if export~}} { {{ name }} } {{else~}} {{name}} {{~/if}} from './{{ name }}'
+import { theme } from '../../theme'
 
 export default {
   title: 'Components/{{ name }}',
@@ -7,11 +9,17 @@ export default {
   backgrounds: {
     default: 'white',
   },
+  argTypes: {
+    color: {
+      options: Object.keys(theme.colors || {}),
+      control: { type: 'radio' },
+    },
+  },
 } as ComponentMeta<typeof {{ name }}>
 
 const Template: ComponentStory<typeof {{ name }}> = args => <{{ name }} {...args} />
 
-export const Primary = Template.bind({})
-Primary.args = {
+export const Properties = Template.bind({})
+Properties.args = {
   
 }

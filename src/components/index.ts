@@ -1,1 +1,3 @@
-export * from "./Button";
+export { Button } from './Button'
+export { Heading } from './Heading'
+export * from 'theme-ui'
