@@ -4,6 +4,12 @@ import { Theme, ThemeProvider as TP } from 'theme-ui'
 const defaultButton = {
   cursor: 'pointer',
   transition: 'opacity 0.1s',
+  borderRadius: '5px',
+  fontSize: [0, 1, 2],
+  lineHeight: [1.33333333, 1.42857143, 1.5],
+  fontWeight: 'heading',
+  p: 3,
+  minWidth: 'button',
   '&:hover': {
     opacity: 0.5,
   },
@@ -11,14 +17,21 @@ const defaultButton = {
 
 const theme: Theme = {
   fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 72],
-  space: [0, 4, 8, 16, 24, 32, 64, 128, 256, 512],
+  space: [0, 4, 8, 12, 16, 24, 32, 64, 128, 256, 512],
+  sizes: {
+    button: 140,
+  },
   colors: {
     text: '#000',
     background: '#fff',
-    primary: '#07c',
+    primary: '#0066FF',
     secondary: '#05a',
-    accent: '#609',
+    accent: '#0066FF',
+    accent10: 'rgba(0, 102, 255, 0.1)',
     muted: '#f6f6f6',
+    darkPrimary: '#272937',
+    darkTertiary: '#27293759',
+    dark5: '#2729370D',
   },
   fonts: {
     body: 'system-ui, sans-serif',
@@ -32,7 +45,7 @@ const theme: Theme = {
   },
   lineHeights: {
     body: 1.5,
-    heading: 1.125,
+    heading: 1.5,
   },
   text: {
     heading: {
@@ -46,9 +59,21 @@ const theme: Theme = {
       ...defaultButton,
       bg: 'primary',
     },
-    secondary: {
+    outline: {
       ...defaultButton,
-      bg: 'secondary',
+      bg: 'background',
+      border: '1px solid rgba(39, 41, 55, 0.35)',
+      color: 'darkPrimary',
+    },
+    accent: {
+      ...defaultButton,
+      bg: 'accent10',
+      color: 'accent',
+    },
+    muted: {
+      ...defaultButton,
+      bg: 'dark5',
+      color: 'darkTertiary',
     },
   },
   styles: {

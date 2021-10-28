@@ -10,11 +10,7 @@ export default {
   component: Button,
   argTypes: {
     variant: {
-      options: ['primary', 'secondary'],
-      control: { type: 'radio' },
-    },
-    color: {
-      options: Object.keys(theme.colors || {}),
+      options: Object.keys(theme.buttons || {}),
       control: { type: 'radio' },
     },
   },
@@ -29,5 +25,4 @@ export const Properties = Template.bind({})
 Properties.args = {
   children: 'Test button',
   variant: 'primary',
-  color: 'background',
 }
