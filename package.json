@@ -1,6 +1,6 @@
 {
   "name": "@silviopaganini/design-system",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "license": "MIT",
   "main": "./lib/main.js",
   "module": "./lib/main.js",
