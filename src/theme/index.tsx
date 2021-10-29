@@ -8,13 +8,13 @@ const defaultButton: ThemeUIStyleObject = {
   borderRadius: '5px',
   fontSize: [0, 1, 2],
   fontWeight: 'heading',
-  py: 3,
-  px: 4,
+  py: [3, 4, 5],
+  px: [4, 5, 6],
   lineHeight: [1.33333333, 1.42857143, 1.5],
   display: 'flex',
+  position: 'relative',
   alignItems: 'center',
   justifyContent: 'center',
-  minWidth: 'button',
   '&:hover': {
     opacity: 0.5,
   },
@@ -22,10 +22,7 @@ const defaultButton: ThemeUIStyleObject = {
 
 const theme: Theme = {
   fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 72],
-  space: [0, 4, 8, 12, 16, 24, 32, 64, 128, 256, 512],
-  sizes: {
-    button: 140,
-  },
+  space: [0, 4, 8, 10, 12, 16, 24, 32, 64, 128, 256, 512],
   colors: {
     text: '#000',
     background: '#fff',

@@ -1,5 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Box } from 'theme-ui'
 import { theme } from '../../theme'
 
 import { Button } from './Button'
@@ -28,16 +29,20 @@ Properties.args = {
 }
 
 const Icon = () => (
-  <svg
+  <Box
+    as="svg"
+    // @ts-ignore
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 22 22"
     width="22"
-    height="100%"
     fill="currentcolor"
+    viewBox="0 0 22 22"
     preserveAspectRatio="true"
+    sx={{
+      height: [15, 18, 22],
+    }}
   >
     <circle r={10} cx={11} cy={11} fill="none" stroke="currentcolor" strokeWidth={2} />
-  </svg>
+  </Box>
 )
 
 export const PreIcon = Template.bind({})
