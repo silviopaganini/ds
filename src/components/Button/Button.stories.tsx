@@ -1,9 +1,9 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { Box } from 'theme-ui'
 import { theme } from '../../theme'
 
 import { Button } from './Button'
+import { Icons } from '../'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -28,41 +28,24 @@ Properties.args = {
   variant: 'primary',
 }
 
-const Icon = () => (
-  <Box
-    as="svg"
-    // @ts-ignore
-    xmlns="http://www.w3.org/2000/svg"
-    width="22"
-    fill="currentcolor"
-    viewBox="0 0 22 22"
-    preserveAspectRatio="true"
-    sx={{
-      height: [15, 18, 22],
-    }}
-  >
-    <circle r={10} cx={11} cy={11} fill="none" stroke="currentcolor" strokeWidth={2} />
-  </Box>
-)
-
 export const PreIcon = Template.bind({})
 PreIcon.args = {
   children: 'Test button',
   variant: 'primary',
-  preIcon: <Icon />,
+  preIcon: <Icons id="circle" />,
 }
 
 export const PosIcon = Template.bind({})
 PosIcon.args = {
   children: 'Test button',
   variant: 'primary',
-  posIcon: <Icon />,
+  posIcon: <Icons id="circle" />,
 }
 
 export const BothIcons = Template.bind({})
 BothIcons.args = {
   children: 'Test button',
   variant: 'primary',
-  preIcon: <Icon />,
-  posIcon: <Icon />,
+  preIcon: <Icons id="circle" />,
+  posIcon: <Icons id="circle" />,
 }
