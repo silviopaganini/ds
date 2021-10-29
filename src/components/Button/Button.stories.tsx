@@ -26,3 +26,38 @@ Properties.args = {
   children: 'Test button',
   variant: 'primary',
 }
+
+const Icon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 22 22"
+    width="22"
+    height="100%"
+    fill="currentcolor"
+    preserveAspectRatio="true"
+  >
+    <circle r={10} cx={11} cy={11} fill="none" stroke="currentcolor" strokeWidth={2} />
+  </svg>
+)
+
+export const PreIcon = Template.bind({})
+PreIcon.args = {
+  children: 'Test button',
+  variant: 'primary',
+  preIcon: <Icon />,
+}
+
+export const PosIcon = Template.bind({})
+PosIcon.args = {
+  children: 'Test button',
+  variant: 'primary',
+  posIcon: <Icon />,
+}
+
+export const BothIcons = Template.bind({})
+BothIcons.args = {
+  children: 'Test button',
+  variant: 'primary',
+  preIcon: <Icon />,
+  posIcon: <Icon />,
+}

@@ -1,14 +1,19 @@
 import React, { PropsWithChildren } from 'react'
 import { Theme, ThemeProvider as TP } from 'theme-ui'
+import type { ThemeUIStyleObject } from 'theme-ui'
 
-const defaultButton = {
+const defaultButton: ThemeUIStyleObject = {
   cursor: 'pointer',
   transition: 'opacity 0.1s',
   borderRadius: '5px',
   fontSize: [0, 1, 2],
-  lineHeight: [1.33333333, 1.42857143, 1.5],
   fontWeight: 'heading',
-  p: 3,
+  py: 3,
+  px: 4,
+  lineHeight: [1.33333333, 1.42857143, 1.5],
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   minWidth: 'button',
   '&:hover': {
     opacity: 0.5,
