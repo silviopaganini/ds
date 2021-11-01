@@ -4,7 +4,7 @@ import { Icons } from './Icons'
 
 describe('Icons', () => {
   test('matches snapshot', () => {
-    const wrapper = render(<Icons id="circle" />)
+    const wrapper = render(<Icons id="Circle" />)
     expect(wrapper).toMatchSnapshot()
   })
 })

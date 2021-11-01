@@ -32,26 +32,26 @@ export const PreIcon = Template.bind({})
 PreIcon.args = {
   children: 'Test button',
   variant: 'primary',
-  preIcon: <Icons id="circle" color="background" />,
+  preIcon: <Icons id="Circle" color="background" />,
 }
 
 export const PosIcon = Template.bind({})
 PosIcon.args = {
   children: 'Test button',
   variant: 'primary',
-  posIcon: <Icons id="circle" color="background" />,
+  posIcon: <Icons id="Circle" color="background" />,
 }
 
 export const BothIcons = Template.bind({})
 BothIcons.args = {
   children: 'Test button',
   variant: 'primary',
-  preIcon: <Icons id="circle" color="background" />,
-  posIcon: <Icons id="circle" color="background" />,
+  preIcon: <Icons id="Circle" color="background" />,
+  posIcon: <Icons id="Circle" color="background" />,
 }
 
 export const OnlyIcon = Template.bind({})
 OnlyIcon.args = {
   variant: 'primary',
-  preIcon: <Icons id="circle" color="background" />,
+  preIcon: <Icons id="Circle" color="background" />,
 }

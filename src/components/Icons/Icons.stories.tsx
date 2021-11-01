@@ -21,5 +21,5 @@ const Template: ComponentStory<typeof Icons> = args => <Icons {...args} />
 
 export const Properties = Template.bind({})
 Properties.args = {
-  id: 'circle',
+  id: 'Circle',
 }
