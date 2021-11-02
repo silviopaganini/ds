@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from 'react'
 import { Theme, ThemeProvider as TP } from 'theme-ui'
 import type { ThemeUIStyleObject } from 'theme-ui'
+import deepmerge from 'deepmerge'
 
 const defaultButton: ThemeUIStyleObject = {
   cursor: 'pointer',
@@ -109,7 +110,7 @@ type ThemeProviderProps = PropsWithChildren<{
 }>
 
 const PlatinionProvider = ({ theme = internalTheme, children }: ThemeProviderProps) => (
-  <TP theme={theme}>{children}</TP>
+  <TP theme={deepmerge(internalTheme, theme)}>{children}</TP>
 )
 
 export { theme, PlatinionProvider }

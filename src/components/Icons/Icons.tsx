@@ -1,22 +1,24 @@
 import React, { PropsWithChildren } from 'react'
-import { Box, ColorMode } from 'theme-ui'
-import { theme } from '../../theme'
+import { Box, ColorMode, useThemeUI } from 'theme-ui'
 
 type IconShapeProps = {
   color?: keyof ColorMode
 }
 
 const IconShapes = {
-  Circle: ({ color = 'text' }: IconShapeProps) => (
-    <circle
-      r={10}
-      cx={11}
-      cy={11}
-      fill="none"
-      stroke={(theme.colors ? theme.colors[color] : 'currentcolor') as string}
-      strokeWidth={2}
-    />
-  ),
+  Circle: ({ color = 'text' }: IconShapeProps) => {
+    const { theme } = useThemeUI()
+    return (
+      <circle
+        r={10}
+        cx={11}
+        cy={11}
+        fill="none"
+        stroke={(theme.colors ? theme.colors[color] : 'currentcolor') as string}
+        strokeWidth={2}
+      />
+    )
+  },
 }
 
 export type IconsProps = PropsWithChildren<{
@@ -26,6 +28,7 @@ export type IconsProps = PropsWithChildren<{
 
 const Icons = ({ id, color = 'text', children }: IconsProps) => {
   const Icon = IconShapes[id]
+  const { theme } = useThemeUI()
 
   return (
     <Box
