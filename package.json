@@ -1,6 +1,6 @@
 {
   "name": "@silviopaganini/design-system",
-  "version": "0.1.21",
+  "version": "0.1.22",
   "license": "MIT",
   "main": "./lib/main.js",
   "module": "./lib/main.js",
@@ -23,6 +23,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "deepmerge": "^4.2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
