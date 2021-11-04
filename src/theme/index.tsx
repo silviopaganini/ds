@@ -62,7 +62,7 @@ const theme: Theme = {
       ...defaultButton,
       bg: 'primary',
     },
-    outline: {
+    secondary: {
       ...defaultButton,
       bg: 'background',
       border: '1px solid rgba(39, 41, 55, 0.35)',
@@ -77,6 +77,13 @@ const theme: Theme = {
       ...defaultButton,
       bg: 'dark5',
       color: 'darkTertiary',
+    },
+    text: {
+      ...defaultButton,
+      bg: 'transparent',
+      color: 'primary',
+      px: 'initial',
+      py: 'initial',
     },
   },
   styles: {
