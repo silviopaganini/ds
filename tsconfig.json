@@ -17,5 +17,5 @@
     "declaration": true
   },
   "include": ["src"],
-  "exclude": ["src/**/*.stories.@(mdx,tsx,ts)", "node_modules/**"]
+  "exclude": ["src/setupTests.ts", "src/**/*.stories.@(mdx,tsx,ts)", "node_modules/**"]
 }

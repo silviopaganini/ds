@@ -1,11 +1,9 @@
 import React from 'react'
 import { Button as B, Box } from 'theme-ui'
 import type { ButtonProps } from 'theme-ui'
+import { IWithIcons } from '../../types'
 
-type Props = ButtonProps & {
-  preIcon?: JSX.Element
-  posIcon?: JSX.Element
-}
+type Props = ButtonProps & IWithIcons & {}
 
 export const Button = ({ posIcon, preIcon, children, ...props }: Props) => {
   return (

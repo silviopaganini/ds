@@ -21,6 +21,16 @@ const defaultButton: ThemeUIStyleObject = {
   },
 }
 
+const defaultLink: ThemeUIStyleObject = {
+  cursor: 'pointer',
+  fontSize: [0, 1, 2],
+  '&:hover': {
+    span: {
+      borderBottomColor: 'transparent',
+    },
+  },
+}
+
 const theme: Theme = {
   fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 72],
   space: [0, 4, 8, 10, 12, 16, 24, 32, 64, 128, 256, 512],
@@ -31,10 +41,13 @@ const theme: Theme = {
     secondary: '#05a',
     accent: '#0066FF',
     accent10: 'rgba(0, 102, 255, 0.1)',
+    accent30: 'rgba(0, 102, 255, 0.3)',
     muted: '#f6f6f6',
     darkPrimary: '#272937',
     darkTertiary: '#27293759',
     dark5: '#2729370D',
+    darkPrimary35: 'rgba(39, 41, 55, 0.35)',
+    darkQuaternary: 'rgba(39, 41, 55, 0.12)',
   },
   fonts: {
     body: 'system-ui, sans-serif',
@@ -57,6 +70,32 @@ const theme: Theme = {
       lineHeight: 'heading',
     },
   },
+  links: {
+    primary: {
+      ...defaultLink,
+      color: 'primary',
+      span: {
+        borderBottom: '1px solid',
+        borderBottomColor: 'accent30',
+      },
+    },
+    secondary: {
+      ...defaultLink,
+      color: 'darkPrimary',
+      span: {
+        borderBottom: '1px solid',
+        borderBottomColor: 'darkQuaternary',
+      },
+    },
+    muted: {
+      ...defaultLink,
+      color: 'darkTertiary',
+      span: {
+        borderBottom: '1px solid',
+        borderBottomColor: 'darkQuaternary',
+      },
+    },
+  },
   buttons: {
     primary: {
       ...defaultButton,
@@ -65,7 +104,8 @@ const theme: Theme = {
     secondary: {
       ...defaultButton,
       bg: 'background',
-      border: '1px solid rgba(39, 41, 55, 0.35)',
+      border: '1px solid',
+      borderColor: 'darkPrimary35',
       color: 'darkPrimary',
     },
     accent: {

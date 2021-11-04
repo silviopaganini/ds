@@ -46,8 +46,8 @@ export const BothIcons = Template.bind({})
 BothIcons.args = {
   children: 'Test button',
   variant: 'primary',
-  preIcon: <Icons id="Circle" color="background" />,
-  posIcon: <Icons id="Circle" color="background" />,
+  preIcon: <Icons id="Circle" color="primary" />,
+  posIcon: <Icons id="Circle" color="primary" />,
 }
 
 export const OnlyIcon = Template.bind({})
